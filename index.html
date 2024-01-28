@@ -110,6 +110,21 @@
       </div>
     </div>
   </header>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuOpenBtn = document.querySelector('.menu-open-btn');
+    const menuCloseBtn = document.querySelector('.menu-close-btn');
+    const mobMenu = document.querySelector('.mob-menu');
+
+    menuOpenBtn.addEventListener('click', function () {
+      mobMenu.classList.add('is-open');
+    });
+
+    menuCloseBtn.addEventListener('click', function () {
+      mobMenu.classList.remove('is-open');
+    });
+  });
+</script>
   <main>
     <section class="hero_image">
       <div class="container">
@@ -581,7 +596,7 @@
     </div>
   </footer>
 
-  <div class="backdrop is-open">
+  <div class="backdrop">
     <!-- is-open -->
     <div class="modal">
 
@@ -661,29 +676,28 @@
           </label>
         </div>
 
-        <div class="modal-field-checkbox">
-          <input type="checkbox" class="input-checkbox visually-hidden" name="user-privacy" id="user-privacy"
-            value="true" required>
-
-          <label for="user-privacy" class="checkbox-text">
-            <span class="check-box">
-              <svg class="check-icon" width="10" height="8">
-                <use href="./images/icons.svg#icon-check-agree"></use>
-              </svg>
-            </span>
-          </label>
-          <div>
-            <p>I accept the terms and conditions of the <a href="" class="link-policy">Privacy Policy</a></p>
-          </div>
-        </div>
-
-
         <button type="submit" class="modal-btn">Send</button>
       </form>
 
     </div>
 
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const modalOpenBtn = document.querySelector('.first-button');
+      const modalCloseBtn = document.querySelector('.modal-close-btn');
+      const modalBackdrop = document.querySelector('.backdrop');
+
+      modalOpenBtn.addEventListener('click', function () {
+        modalBackdrop.classList.add('is-open');
+      });
+
+      modalCloseBtn.addEventListener('click', function () {
+        modalBackdrop.classList.remove('is-open');
+      });
+    });
+  </script>
 </body>
 
 </html>

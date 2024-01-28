@@ -252,6 +252,11 @@ img {
   font-weight: 700;
 }
 
+.mob-nav-list:hover,
+.mob-nav-list:focus {
+  color: #404bbf;
+}
+
 .current-mob {
   color: #404BBF;
 }
@@ -294,10 +299,6 @@ img {
   width: 40px;
   height: 40px;
 }
-
-.soclist-link {}
-
-.icon-footer {}
 
 /** ---------SECTION HERO IMAGE------------ */
 
@@ -774,6 +775,12 @@ img {
   line-height: 24px;
   letter-spacing: 0.48px;
   outline: transparent;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.foot-input-email:focus {
+  border-color: #4D5AE5;
 }
 
 .foot-input-email::placeholder {
@@ -801,6 +808,13 @@ img {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.04em;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-foot-form:focus, 
+.btn-foot-form:hover {
+  background-color: #404BBF;
 }
 
 .icon-footer-form {
@@ -988,11 +1002,13 @@ img {
 
 .modal-field-checkbox {
   margin-bottom: 24px;
+  display: flex;
 }
 
 .checkbox-text {
   display: flex;
   align-items: center;
+  align-self: center;
   color: #8E8F99;
   font-size: 12px;
   font-weight: 400;
@@ -1007,7 +1023,7 @@ img {
   border: 1px solid rgba(46, 47, 66, 0.40);
   border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* display: block; */
+  flex-shrink: 0;
 }
 
 .link-policy {
@@ -1197,6 +1213,13 @@ img {
   .footer>.container {
     padding-left: 108px;
   }
+
+  /* ----Modal------------- */
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -1204,6 +1227,28 @@ img {
     max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  /* -----HEADER------ */
+  .header {
+    /* padding-top: 24px;
+    padding-bottom: 24px; */
+  }
+
+  .logo-header {
+    margin-right: 76px;
+  }
+
+  .address-option {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .address-link {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.32px;
   }
 
   /* -----SECTION HERO IMAGE------ */
